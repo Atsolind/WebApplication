@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -14,7 +15,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     WebView webView;
     EditText editText;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
+    }
+    public void refreshPage(View v){
+        webView.reload();
     }
 
 }

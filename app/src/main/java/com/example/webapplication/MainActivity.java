@@ -46,13 +46,20 @@ public class MainActivity extends AppCompatActivity {
         webView.reload();
     }
 
-    public void ececuteJavascript(View v){
-        webView.evaluateJavascript("javascript:initialize()", null);
+    public void nextPage(View v){
+        if (webView.canGoForward()){
+            webView.goForward();
+        }
+        else{
+        }
 
     }
-    public void ececuteJavascript2(View v){
-        webView.evaluateJavascript("javascript:shoutOut()", null);
-
+    public void previousPage(View v){
+        if( webView.canGoBack()){
+            webView.goBack();
+        }
+        else {
+        }
     }
 
 
